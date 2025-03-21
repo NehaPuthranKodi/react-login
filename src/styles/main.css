@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Bodoni+Moda:wght@400;600&family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("../assets/images/bg_image.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.login-form-container {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  background: white;
+  border-radius: 20px;
+}
+.login-form-container .leftside {
+  width: 50%;
+  background: url("../assets/images/bg_image.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  color: white;
+  border-radius: 20px;
+}
+.login-form-container .leftside .quote {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-right: 60px;
+}
+.login-form-container .leftside .quote::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 10px;
+}
+.login-form-container .leftside h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+.login-form-container .leftside p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  opacity: 0.8;
+  margin-top: auto;
+}
+.login-form-container .rightside {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+.login-form-container .rightside .logo {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #333;
+}
+.login-form-container .rightside h2 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.login-form-container .rightside p {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(86, 86, 86);
+  margin-bottom: 20px;
+}
+.login-form-container .rightside .form-group {
+  margin-bottom: 15px;
+}
+.login-form-container .rightside .form-group .password-input-container {
+  position: relative;
+}
+.login-form-container .rightside .form-group .password-input-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #eeebeb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+  background-color: #eeebeb;
+  color: black;
+}
+.login-form-container .rightside .form-group .password-input-container input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+.login-form-container .rightside .form-group .password-input-container .password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.login-form-container .rightside .form-group label {
+  font-family: "Roboto", sans-serif;
+  display: block;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+.login-form-container .rightside .form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #eeebeb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+  background-color: #eeebeb;
+  color: black;
+}
+.login-form-container .rightside .form-group input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+.login-form-container .rightside .remember-me {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+.login-form-container .rightside .remember-me a {
+  color: #000;
+}
+.login-form-container .rightside .login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login-form-container .rightside .login-button:hover {
+  background: #333;
+}
+.login-form-container .rightside .google-login {
+  color: #333;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.login-form-container .rightside .google-login:hover {
+  background: #f3f4f6;
+}
+.login-form-container .rightside .signup-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+.login-form-container .rightside .signup-link a {
+  color: #1a1a1a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.login-form-container .rightside .signup-link a:hover {
+  text-decoration: underline;
+}
+
+input[type=password]::-ms-reveal {
+  display: none;
+}
+input[type=password]::-webkit-contacts-auto-fill-button, input[type=password]::-webkit-credentials-auto-fill-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .login-form-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .login-form-container .leftside {
+    display: none;
+  }
+  .login-form-container .rightside {
+    width: 100%;
+    padding: 20px;
+  }
+  .login-form-container .rightside .logo {
+    margin-bottom: 20px;
+  }
+  .login-form-container .rightside h2 {
+    font-size: 28px;
+  }
+  .login-form-container .rightside .signup-link {
+    margin-top: 40px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
