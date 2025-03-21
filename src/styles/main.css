@@ -88,7 +88,7 @@ html, body, #root {
   width: 50%;
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 40px 150px;
 }
 .login-form-container .rightside .logo {
   font-family: "Roboto", sans-serif;
@@ -230,6 +230,11 @@ input[type=password]::-webkit-contacts-auto-fill-button, input[type=password]::-
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .login-form-container .rightside {
+    padding: 40px 100px;
+  }
+}
 @media (max-width: 768px) {
   .login-form-container {
     flex-direction: column;
